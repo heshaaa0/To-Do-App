@@ -26,6 +26,7 @@ services:
       DB_USER: root
       DB_PASSWORD: root
       DB_NAME: todo_app
+    command: sh -c "npm install -g wait-port && wait-port mysql:3306 && node index.js"
 
   client:
     build: ./client
