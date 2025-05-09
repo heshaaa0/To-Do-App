@@ -43,6 +43,7 @@ CREATE TABLE tasks (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+```
 ✅ Usage
 
 Add a task using the input field.
@@ -70,3 +71,30 @@ Ensure MySQL server is running
 Double-check DB credentials
 
 If ports are in use, change them in the code
+
+
+  ## Running Tests
+
+### Backend Tests (Express API)
+
+The backend is tested using **Mocha**, **Chai**, and **Supertest**.
+
+#### 1. Install Testing Dependencies
+
+Navigate to the `backend` directory and install the necessary test dependencies:
+
+```bash
+cd backend
+npm install --save-dev mocha chai supertest
+
+```
+Frontend Tests (React + Vitest)
+The frontend is tested using Vitest, React Testing Library, and Jest DOM.
+
+1. Install Testing Dependencies
+Navigate to the frontend directory and install the necessary test dependencies:
+
+```
+cd frontend
+npm install --save-dev vitest @testing-library/react @testing-library/jest-dom
+```
