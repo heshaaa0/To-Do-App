@@ -1,13 +1,72 @@
-# To-Do-App
+# 📝 To-Do Web App
 
-This system has 3 main components, the database, the backend API, and the frontend  
-UI.  
-   
- 
-• Todo tasks are stored in the database, under a table named “task”. You can decide on 
-what columns should be in the “task” table.  
-• Backend should comprise with a REST API that facilitates the user operations. You can 
-decide on how the REST API should be designed.  
-• Frontend should be a simple SPA.  
-• All components should be able to run using Docker. You can use `docker-compose` to 
-start the 3 containers accordingly.
+A simple full-stack To-Do List application built with React, Express, and MySQL.
+
+## 🚀 Features
+
+- Add new tasks  
+- View the latest 5 incomplete tasks  
+- Mark tasks as done  
+- Delete tasks  
+- Toast notifications for actions  
+- Responsive UI using Tailwind CSS  
+
+## 🛠 Tech Stack
+
+- **Frontend:** React, Tailwind CSS, Axios, react-hot-toast  
+- **Backend:** Node.js, Express.js  
+- **Database:** MySQL  
+
+## 📂 Project Structure
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/todo-app.git
+cd todo-app
+
+2. Backend Setup
+cd server
+npm install
+
+MySQL Setup
+
+CREATE DATABASE todo_app;
+USE todo_app;
+
+CREATE TABLE tasks (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  is_done BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+✅ Usage
+
+Add a task using the input field.
+
+Click "Done" to mark it as complete.
+
+(Optional) Use the delete button to remove a task.
+
+Toast messages appear for each action.
+
+🧱 Future Improvements
+
+User login & authentication
+
+Pagination
+
+Filters & categories
+
+Dark mode toggle
+
+🧩 Troubleshooting
+
+Ensure MySQL server is running
+
+Double-check DB credentials
+
+If ports are in use, change them in the code
